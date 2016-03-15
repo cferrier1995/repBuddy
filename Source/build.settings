@@ -1,0 +1,89 @@
+settings =
+{
+        orientation =
+        {
+                default = "portrait",
+				supported = { "portrait","portraitUpsideDown" },
+        },
+
+         window = {
+       -- defaultViewWidth = 1024,
+        --defaultViewHeight = 600,
+          --defaultMode = "fullscreen",
+    },
+ 
+        iphone =
+        {
+                
+                plist =
+                {
+                        UIPrerenderedIcon = true,
+                        CFBundleIdentifier = "com.bizarre.monstruo",
+                        UIApplicationExitsOnSuspend = false,
+                        CFBundleIconFile = "Icon.png",
+						CFBundleIconFiles = {
+						   "Icon.png",
+            "Icon@2x.png",
+            "Icon-60.png",
+            "Icon-60@2x.png",
+            "Icon-60@3x.png",
+            "Icon-72.png",
+            "Icon-72@2x.png",
+            "Icon-76.png",
+            "Icon-76@2x.png",
+            "Icon-Small-40.png",
+            "Icon-Small-40@2x.png",
+            "Icon-Small-40@3x.png",
+            "Icon-Small-50.png",
+            "Icon-Small-50@2x.png",
+            "Icon-Small.png",
+            "Icon-Small@2x.png",
+            "Icon-Small@3x.png",
+						},
+						UIAppFonts =  {
+						"Mido Medium.otf",
+						"Formation Sans Regular.ttf",
+                        "Chalkboard.ttc",
+                        "chalkboard-bold.ttf",
+                        "Dunkin.ttf",
+                        "Andale Mono.ttf",
+                        "Kronika.ttf",
+                        "GeosansLight.ttf"
+
+                       				 },
+                },
+        },
+	android =
+	{
+        largeHeap=true,
+         googlePlayGamesAppId = "448486758626",
+	usesPermissions =
+		{
+			"android.permission.INTERNET",
+            "android.permission.VIBRATE",
+			"android.permission.ACCESS_NETWORK_STATE",
+			"android.permission.READ_PHONE_STATE",
+		},
+	},
+  
+  excludeFiles = 
+   {
+      --all = { "*secret.txt", "artwork/*" },
+      iphone = { "Icon-*dpi.png", "images/Android/*" },
+      android = { "Icon.png","images/IOS/*", "*@2x.png", "*@40.png","*@50.png","*@76.png","*@60.png","*@3x.png" }
+   },
+
+	plugins =
+    {
+
+    ['plugin.texttospeech'] =
+    {
+        publisherId = 'com.spiralcodestudio'
+    },
+
+
+
+
+        },
+        
+}
